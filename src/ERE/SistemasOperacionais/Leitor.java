@@ -19,6 +19,9 @@ public class Leitor {
         while(bLeitor.ready()) {
             entrada.add(bLeitor.readLine());
         }
+        
+        bLeitor.close();
+        leitor.close();
 
         return entrada;
     }

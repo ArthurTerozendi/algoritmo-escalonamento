@@ -23,7 +23,11 @@ public class Escritor {
 
         for (String saida: saidas) {
             bEscritor.write(saida);
+            bEscritor.newLine();
         }
+
+        bEscritor.close();
+        escritor.close();
 
     }
 }
