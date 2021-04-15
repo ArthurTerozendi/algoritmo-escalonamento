@@ -15,8 +15,10 @@ public class Main {
         ArrayList<String> saidas = new ArrayList<>();
 
         FCFS fcfs = new FCFS(entradas);
+        RoundRobin roundRobin = new RoundRobin(entradas);
 
         saidas.add(fcfs.escalonamento());
+        roundRobin.escalonamento();
         System.out.println(saidas);
         escritor.escrever(saidas);
     }
