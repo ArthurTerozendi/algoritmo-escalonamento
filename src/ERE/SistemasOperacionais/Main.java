@@ -15,10 +15,12 @@ public class Main {
         ArrayList<String> saidas = new ArrayList<>();
 
         FCFS fcfs = new FCFS(entradas);
+        ShortestJobFirst shortestJobFirst = new ShortestJobFirst(entradas);
         RoundRobin roundRobin = new RoundRobin(entradas);
 
         saidas.add(fcfs.escalonamento());
-        roundRobin.escalonamento();
+        saidas.add(roundRobin.escalonamento());
+        saidas.add(shortestJobFirst.escalonamento());
         System.out.println(saidas);
         escritor.escrever(saidas);
     }

@@ -10,7 +10,6 @@ public class FCFS {
     }
 
     public String escalonamento() {
-        String saida = "";
         ArrayList<Integer> chegadas = new ArrayList<>();
         ArrayList<Integer> duracoes = new ArrayList<>();
 
@@ -68,13 +67,11 @@ public class FCFS {
                 break;
             }
         }
-        saida = "FCFS "
+        return "FCFS "
                 + tempoRetornoTotal/chegadas.size()
                 + " "
                 + tempoEsperaTotal/chegadas.size()
                 + " "
                 + tempoEsperaTotal/chegadas.size();
-
-        return saida;
     }
 }

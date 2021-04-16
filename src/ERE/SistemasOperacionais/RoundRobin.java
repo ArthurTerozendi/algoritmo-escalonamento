@@ -9,7 +9,7 @@ public class RoundRobin {
         this.entradas = entradas;
     }
 
-    public void escalonamento() {
+    public String escalonamento() {
         ArrayList<Integer> chegadas = new ArrayList<>();
         ArrayList<Integer> duracoes = new ArrayList<>();
 
@@ -108,10 +108,11 @@ public class RoundRobin {
                 break;
             }
         }
-        System.out.println(+ (tempoRetornoTotal)/chegadas.size()
+        return "RR"
+                + (tempoRetornoTotal)/chegadas.size()
                 + " "
                 + (tempoRespostaTotal)/chegadas.size()
                 + " "
-                + tempoEsperaTotal/chegadas.size());
+                + tempoEsperaTotal/chegadas.size();
     }
 }
